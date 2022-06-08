@@ -1,0 +1,252 @@
+#chartdiv {
+	width: 100%;
+	height: 100px;
+}
+
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Fira Sans', Helvetica, sans-serif;
+	
+	color: #161f24;
+}
+input {
+	background-color: transparent;
+	border: none;
+	padding: 5px;	
+}
+h1 {
+	font-size: 40px;
+}
+hr {
+	margin: 0px;
+	height: 4px;
+	background-color: rgb(99, 106, 121);
+	border: none;
+}
+a {
+	text-decoration: none;
+	color: #161f24;
+	font-size: 13px;
+	line-height: 16px;
+	padding: 10px;
+}
+a:hover {
+	color: #b82d6e;
+	text-decoration: underline;
+	background-color: #dee6e9;
+}
+
+.container {
+	max-width: 700px;
+	margin: 0 auto;
+
+}
+.wraper {
+	background: linear-gradient(to top, #f0e0b7 0%, #b7dff2 100%);
+	background-repeat: no-repeat;
+	max-width: 740px;
+	padding-bottom: 20px;
+}
+.container-accordeon {
+	background-color: transparent;
+	border: 1px solid #b1a585;
+	background-repeat: no-repeat;
+	
+}
+.form-inner{
+	display: flex;
+	padding: 20px 0;
+}
+.form-item {
+	margin-left: 20px;
+	width: 45%;	
+	background-color: #d2eaf5;
+	border: 2px solid #4e95b8;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(119, 168, 182, 0.55);
+}
+
+.day-name {
+	margin-top: 5px;
+	font-size: 36px;
+}
+.times {
+	font-size: 36PX;
+}
+.form-btn, .form-position {
+	width: 25%;
+	background-color: #d2eaf5;
+	border: 2px solid #4e95b8;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin-left: 20px;
+	color: grey;
+	box-shadow: 0 0 10px rgba(119, 168, 182, 0.55);
+	transition: all 200ms ease-in-out;
+}
+.form-btn:hover {
+	background-color: #b9dcee;
+}
+.form-position:hover {
+	background-color: #b9dcee;
+}
+.search-img {
+	width: 25px;
+	display: none;
+}
+.location {
+	font-size: 32px;
+	font-weight: 600;
+	font-style: italic;
+	text-align: center;
+}
+
+.city-img {
+	padding-top: 10px;
+	width: 60%;
+}
+.temperatur {
+    display: flex;
+	padding-top: 20px;
+}
+.temperatur-item1 {
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: 2px;	
+}
+.temperatur-item2
+{
+	font-size: 40px;
+}
+.temperature-link-c {
+	padding: 0;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 40px;
+}
+.temperature-link-c:hover {
+	background-color: transparent;
+	cursor: pointer;
+	text-decoration: underline;
+	color: #6f1010;
+}
+.temperature-link-f {
+	padding: 0;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 40px;
+}
+.temperature-link-f:hover {
+	background-color: transparent;
+	cursor: pointer;
+	text-decoration: underline;
+	color: #6f1010;
+}
+.meaning {
+	display: flex;
+	padding-left: 17px;
+}
+.accordion-item {
+	background-color: transparent;
+}
+.accordion-inner1 {
+	background-color: transparent;
+	
+	border: none;
+	
+}
+.accordion-month1 {
+	color: #161f24;
+	font-size: 26px;
+}
+.accordion-day1 {
+	color: #161f24;
+	font-size: 26px;
+}
+.accordion-img {
+	display: block;
+	width: 45px;
+	margin: 0 auto;
+}
+.accordion {
+	color: #000;
+	--bs-accordion-bg: transparent;
+	--bs-accordion-active-bg: transparent;
+	--bs-accordion-btn-focus-border-color: transparent;
+}
+.accordion-body {
+	padding: 5px;
+	height: 80px;
+	background: #d8e9f2;
+	border: 1px solid #4e95b8;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(112, 108, 108, 0.5);
+	text-align: center;
+}
+
+button.accordion-button {
+	padding: 10px;
+	border: none; 
+}
+button.accordion-button:focus {
+	border: none;
+}
+.accordion-content {
+	color: #161f24;
+	text-align: center;
+}
+@media (max-width: 630px) {
+	.city-name, .day-name, .times {
+		font-size: 28px;
+	}
+	.accordion-month1,
+	.accordion-day1 {
+		font-size: 18px;
+	}
+	.temperatur-item1,
+	.temperatur-item2{
+		font-size: 28px;
+	}
+	.temperature-link-c,
+	.temperature-link-f {
+		font-size: 28px;
+	}
+}
+@media (max-width: 450px) {
+	.span-search {
+		display: none;
+	}
+	.search-img {
+		display: block;
+	}
+	.city-name,
+	.day-name,
+	.times {
+		font-size: 20px;
+	}
+	.accordion-month1,
+	.accordion-day1 {
+		font-size: 14px;
+	}
+	.accordion-img {
+		width: 20px;
+	}
+	.accordion-content {
+		font-size: 12px;
+	}
+	.temperatur-item1,
+	.temperatur-item2 {
+		font-size: 20px;
+	}
+	.temperature-link-c,
+	.temperature-link-f {
+		font-size: 20px;
+	}
+}
