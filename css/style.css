@@ -202,6 +202,27 @@ button.accordion-button:focus {
 	color: #161f24;
 	text-align: center;
 }
+.source-code__link {
+	color: #2e7496;
+	font-size: 16px;
+	padding: 0;
+}
+.source-code__creator {
+	padding: 0;
+	font-size: 16px;
+}
+.source-code__link:hover {
+	background-color: transparent;
+	color: #5098bb;
+}
+.source-code__creator:hover {
+	background-color: transparent;
+	color: #161f24;
+}
+.my-name {
+	font-size: 16px;
+	text-decoration: underline;
+}
 @media (max-width: 630px) {
 	.city-name, .day-name, .times {
 		font-size: 28px;
