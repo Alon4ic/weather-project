@@ -15,6 +15,7 @@
 		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
 		rel="stylesheet">
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -27,31 +28,32 @@
 						<span class="span-search">Search</span>
 						<img class="search-img" src="img/search.png" alt="search">
 					</button>
-					<button id="location" class="form-position">Current location</button>
+					<button id="location" class="form-position">Your location</button>
 				</form>
 			</div>
 
 			<section class="weather-city">
 				<div class="row">
 					<div class="col-6">
-						<h1 id="d" class="city-name">Rivne, <span>Ukraine</span></h1>
+						<h1 id="d" class="city-name">Rivne, <span id="country">Ukraine</span></h1>
 						<h2 class="day-name">Tuesday</h2>
 						<h3 class="times">9.10 A.M.</h3>
 					</div>
 					<div class="col-3">
-						<img class="img-fluid city-img" src="img/sunny.png" alt="sunny">
-						<strong class="humidity">Humidity: <span class="humidity-meaning"> 40</span>%</strong>
+						<img class="img-fluid city-img" id="icon" src="img/sunny.png" alt="">
+						<strong class="humidity">Humidity: <span class="humidity-meaning"> </span>%</strong>
 						<br>
-						<strong class="wind">Wind: <span class="wind-meaning">12</span> km/h</strong>
+						<strong class="wind">Wind: <span class="wind-meaning"></span> km/h</strong>
 					</div>
-					<div class="col-3">
+					<div class="col-3 block-temperatur">
 						<div class="temperatur">
-							<div class="temperatur-item1"><strong class="temperatur-strong">20°</strong></div>
+							<div class="temperatur-item1"><strong class="temperatur-strong">20°</strong><span class="min-temp">/17°</span></div>
 						</div>
 						<div class="meaning">
 							<a href="#" id="celcius" class="temperature-link-c">C°/</a>
 							<a href="#" id="fahrenheit" class="temperature-link-f">F°</a>
 						</div>
+						<p class="weather" id="description">Warm</p>
 					</div>
 				</div>
 			</section>

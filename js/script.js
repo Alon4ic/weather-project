@@ -12,6 +12,8 @@ function citySearch(event) {
 let searchForm = document.querySelector(".form-inner");
 searchForm.addEventListener("submit", citySearch);
 
+
+
 function showPosition(position) {
   let myKey = "7db589669794c40edb745ea0a4fe919c";
   let lat = Math.round(position.coords.latitude);
@@ -30,14 +32,29 @@ function temperatureCity(response) {
   let tempCity = Math.round(response.data.main.temp);
   let tempUserCity = document.querySelector(".temperatur-strong");
   tempUserCity.innerHTML = `${tempCity}°`;
+  let minTemp = Math.round(response.data.main.temp_min);
+  let showMinTemp = document.querySelector(".min-temp");
+  showMinTemp.innerHTML = `/${minTemp}°`;
   let humidity = Math.round(response.data.main.humidity);
   let showHumidity = document.querySelector(".humidity-meaning");
   showHumidity.innerHTML = `${humidity}`;
   let wind = Math.round(response.data.wind.speed);
   let showWind = document.querySelector(".wind-meaning");
   showWind.innerHTML = `${wind}`;
+  let weatherElement = response.data.weather[0].description;
+  let newWeatherElement = weatherElement.charAt(0).toUpperCase() + weatherElement.slice(1);
+  let showWeatherElement = document.querySelector("#description");
+  showWeatherElement.innerHTML = `${newWeatherElement}`;
   let newCity = document.querySelector(".city-name");
   newCity.innerHTML = `${response.data.name}`;
+  let iconElement = document.querySelector("#icon");
+  let showIcon = response.data.weather[0].icon;
+  alert(showIcon);
+  iconElement.setAttribute("src", `img/${showIcon}.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  // let iconWeather = document.querySelector("#icon");
+  // iconWeather.setAttribute("src", "https://openweathermap.org/img/wn/01d@2x.png");
 }
 
 let userLocation = document.querySelector(".form-position");

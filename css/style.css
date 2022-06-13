@@ -10,8 +10,8 @@
 }
 body {
 	font-family: 'Fira Sans', Helvetica, sans-serif;
-	color: #161f24;
-	max-width: 740px;
+	color: #183b4f;
+	max-width: 600px;
 	margin: 0 auto;
 }
 input {
@@ -20,17 +20,17 @@ input {
 	padding: 5px;	
 }
 h1 {
-	font-size: 40px;
+	font-size: 34px;
 }
 hr {
 	margin: 0px;
-	height: 4px;
+	height: 2px;
 	background-color: rgb(99, 106, 121);
 	border: none;
 }
 a {
 	text-decoration: none;
-	color: #161f24;
+	color: #183b4f;
 	font-size: 13px;
 	line-height: 16px;
 	padding: 10px;
@@ -49,7 +49,7 @@ a:hover {
 .wraper {
 	background: linear-gradient(to top, #ede5d1 0%, #d4f0f0 100%);
 	background-repeat: no-repeat;
-	max-width: 740px;
+	max-width: 600px;
 	padding-bottom: 20px;
 }
 .container-accordeon {
@@ -64,7 +64,7 @@ a:hover {
 }
 .form-item {
 	margin-left: 20px;
-	width: 45%;	
+	width: 40%;	
 	background-color: #d2eaf5;
 	border: 2px solid #4e95b8;
 	border-radius: 5px;
@@ -73,10 +73,10 @@ a:hover {
 
 .day-name {
 	margin-top: 5px;
-	font-size: 36px;
+	font-size: 34px;
 }
 .times {
-	font-size: 36PX;
+	font-size: 34PX;
 }
 .form-btn, .form-position {
 	width: 25%;
@@ -99,38 +99,40 @@ a:hover {
 	width: 25px;
 	display: none;
 }
-.location {
-	font-size: 32px;
-	font-weight: 400;
-	font-style: italic;
-	text-align: center;
+.form-position {
+	margin-right: 16px;
 }
-
 .city-img {
 	padding-top: 10px;
 	width: 60%;
 }
-.humidity, .wind {
+.humidity,
+.wind {
 	font-weight: 500;
+	color: #183b4f;
+}
+.block-temperatur {
+	margin-left: -10px;
 }
 .temperatur {
-    display: flex;
-	padding-top: 20px;
+    display: flex;	
 }
 .temperatur-item1 {
-	font-size: 40px;
+	padding: 0;
+	font-size: 34px;
 	font-weight: 400;
 	letter-spacing: 2px;	
 }
-.temperatur-item2
-{
-	font-size: 40px;
+.temperatur-item2 {
+	padding: 0;
+	font-size: 34px;
 }
 .temperature-link-c {
-	padding: 0;
+	padding: 10px 0;
 	cursor: pointer;
 	font-weight: 500;
-	font-size: 40px;
+	font-size: 34px;
+	
 }
 .temperature-link-c:hover {
 	background-color: transparent;
@@ -139,10 +141,10 @@ a:hover {
 	color: #6f1010;
 }
 .temperature-link-f {
-	padding: 0;
+	padding: 10px 0 20px;
 	font-weight: 500;
 	cursor: pointer;
-	font-size: 40px;
+	font-size: 34px;
 }
 .temperature-link-f:hover {
 	background-color: transparent;
@@ -150,9 +152,14 @@ a:hover {
 	text-decoration: underline;
 	color: #6f1010;
 }
+.weather {
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+}
 .meaning {
 	display: flex;
-	padding-left: 17px;
+	justify-content: center;
 }
 .accordion-item {
 	background-color: transparent;
@@ -165,11 +172,11 @@ a:hover {
 	
 }
 .accordion-month1 {
-	color: #161f24;
+	color: #265976;
 	font-size: 20px;
 }
 .accordion-day1 {
-	color: #161f24;
+	color: #265976;
 	font-size: 20px;
 }
 .accordion-img {
@@ -178,7 +185,7 @@ a:hover {
 	margin: 0 auto;
 }
 .accordion {
-	color: #000;
+	color: #265976;
 	--bs-accordion-bg: transparent;
 	--bs-accordion-active-bg: transparent;
 	--bs-accordion-btn-focus-border-color: transparent;
@@ -202,7 +209,7 @@ button.accordion-button:focus {
 }
 .accordion-content {
 	margin-top: 8px;
-	color: #161f24;
+	color: #265976;
 	text-align: center;
 }
 .source-code__link {
