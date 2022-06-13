@@ -64,7 +64,7 @@ a:hover {
 }
 .form-item {
 	margin-left: 20px;
-	width: 40%;	
+	width: 60%;	
 	background-color: #d2eaf5;
 	border: 2px solid #4e95b8;
 	border-radius: 5px;
@@ -78,8 +78,8 @@ a:hover {
 .times {
 	font-size: 34PX;
 }
-.form-btn, .form-position {
-	width: 25%;
+.form-btn {
+	width: 30%;
 	background-color: #d2eaf5;
 	border: 2px solid #4e95b8;
 	border-radius: 5px;
@@ -100,7 +100,7 @@ a:hover {
 	display: none;
 }
 .form-position {
-	margin-right: 16px;
+	display: none;
 }
 .city-img {
 	padding-top: 10px;
