@@ -37,7 +37,7 @@ a {
 }
 a:hover {
 	color: #b82d6e;
-	text-decoration: underline;
+	text-decoration: none;
 	background-color: #dee6e9;
 }
 
@@ -112,45 +112,57 @@ a:hover {
 	color: #183b4f;
 }
 .block-temperatur {
-	margin-left: -10px;
+	margin-left: -14px;
 }
 .temperatur {
-    display: flex;	
+    display: flex;
+	justify-content: center;	
 }
 .temperatur-item1 {
 	padding: 0;
 	font-size: 34px;
 	font-weight: 400;
-	letter-spacing: 2px;	
+	letter-spacing: 2px;
+
 }
 .temperatur-item2 {
 	padding: 0;
 	font-size: 34px;
+	
 }
 .temperature-link-c {
 	padding: 10px 0;
 	cursor: pointer;
 	font-weight: 500;
 	font-size: 34px;
+	color: #6f1010;
 	
 }
-.temperature-link-c:hover {
+.temperature-link-c:hover,
+.temperature-link-f:hover {
 	background-color: transparent;
-	cursor: pointer;
-	text-decoration: underline;
 	color: #6f1010;
+	
 }
 .temperature-link-f {
 	padding: 10px 0 20px;
 	font-weight: 500;
 	cursor: pointer;
 	font-size: 34px;
-}
-.temperature-link-f:hover {
-	background-color: transparent;
-	cursor: pointer;
-	text-decoration: underline;
 	color: #6f1010;
+}
+.temperature-link {
+	margin-top: -5px;
+	font-weight: 500;
+	font-size: 34px;
+}
+
+.active {
+	color: #183b4f;
+	cursor: default;
+}
+.active:hover {
+	text-decoration: underline;
 }
 .weather {
 	font-size: 16px;

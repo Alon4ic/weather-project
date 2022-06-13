@@ -13,7 +13,6 @@ let searchForm = document.querySelector(".form-inner");
 searchForm.addEventListener("submit", citySearch);
 
 
-
 function showPosition(position) {
   let myKey = "7db589669794c40edb745ea0a4fe919c";
   let lat = Math.round(position.coords.latitude);
@@ -29,12 +28,10 @@ function getCurrentPosition(event) {
 
 function temperatureCity(response) {
   console.log(response.data);
-  let tempCity = Math.round(response.data.main.temp);
   let tempUserCity = document.querySelector(".temperatur-strong");
-  tempUserCity.innerHTML = `${tempCity}°`;
-  let minTemp = Math.round(response.data.main.temp_min);
+  tempUserCity.innerHTML = Math.round(response.data.main.temp);
   let showMinTemp = document.querySelector(".min-temp");
-  showMinTemp.innerHTML = `/${minTemp}°`;
+  showMinTemp.innerHTML = Math.round(response.data.main.temp_min);
   let humidity = Math.round(response.data.main.humidity);
   let showHumidity = document.querySelector(".humidity-meaning");
   showHumidity.innerHTML = `${humidity}`;
@@ -48,13 +45,11 @@ function temperatureCity(response) {
   let newCity = document.querySelector(".city-name");
   newCity.innerHTML = `${response.data.name}`;
   let iconElement = document.querySelector("#icon");
-  let showIcon = response.data.weather[0].icon;
-  alert(showIcon);
-  iconElement.setAttribute("src", `img/${showIcon}.png`);
+  iconElement.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  // let iconWeather = document.querySelector("#icon");
-  // iconWeather.setAttribute("src", "https://openweathermap.org/img/wn/01d@2x.png");
+ celsiusTemperature = response.data.main.temp;
+ minCelsiusTemperature = response.data.main.temp_min;
 }
 
 let userLocation = document.querySelector(".form-position");
@@ -87,42 +82,30 @@ if (currentMinutes < 10) {
 let currentTime = document.querySelector(".times");
 currentTime.innerHTML = `${currentHour} : ${currentMinutes}`;
 
-// function showTemperatureC(event) {
-//   event.preventDefault();
-//   let temperatureCelcius = document.querySelector(".temperatur-item1");
-//   let currentTempC = 20;
-//   let realTempC = 17;
-//   temperatureCelcius.innerHTML =
-//     Math.round(currentTempC) + "°/" + Math.round(realTempC) + "°";
-// }
-// let celciusLink = document.querySelector("#celcius");
-// celciusLink.addEventListener("click", showTemperatureC);
 
-// function showTemperatureF(event) {
-//   event.preventDefault();
-//   let temperatureFahrenheit = document.querySelector(".temperatur-item1");
-//   let currentTempC = 20;
-//   let realTempC = 17;
-//   temperatureFahrenheit.innerHTML =
-//     Math.round(currentTempC * 1.8 + 32) +
-//     "°" +
-//     "/" +
-//     Math.round(realTempC * 1.8 + 32) +
-//     "°";
-// }
-// let fahrenheitLink = document.querySelector("#fahrenheit");
-// fahrenheitLink.addEventListener("click", showTemperatureF);
+function showTemperatureF(event) {
+  event.preventDefault();
+  let tempUserCity = document.querySelector(".temperatur-strong");
+  //remove the active class the celsius link
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  tempUserCity.innerHTML = Math.round(celsiusTemperature * 1.8 + 32);
+  let showMinTemp = document.querySelector(".min-temp");
+  showMinTemp.innerHTML = Math.round(minCelsiusTemperature * 1.8 + 32);
+}
 
+function showTemperatureC(event) {
+  event.preventDefault();
+  let tempUserCity = document.querySelector(".temperatur-strong");
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  tempUserCity.innerHTML = Math.round(celsiusTemperature);
+  let showMinTemp = document.querySelector(".min-temp");
+  showMinTemp.innerHTML = Math.round(minCelsiusTemperature);
+}
 
-// function userLocation(position) {
-//   let latitude = position.coords.latitude;
-//   let longitude = position.coords.longitude;
-//   let myKey = "7db589669794c40edb745ea0a4fe919c";
-//   let unit = "metric";
-//   let currentUrl = "https://api.openweathermap.org/data/2.5/weather";
-//   let apiUrl = `${currentUrl}?lat=${latitude}&lon=${longitude}&appid=${myKey}&units=${unit}`;
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showTemperatureF);
 
- 
-// }
-
-// function showUserLocation(event)
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", showTemperatureC);
