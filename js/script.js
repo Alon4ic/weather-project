@@ -12,6 +12,7 @@ function citySearch(event) {
 let searchForm = document.querySelector(".form-inner");
 searchForm.addEventListener("submit", citySearch);
 
+search = ("Rivne");
 
 function showPosition(position) {
   let myKey = "7db589669794c40edb745ea0a4fe919c";

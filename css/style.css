@@ -10,9 +10,10 @@
 }
 body {
 	font-family: 'Fira Sans', Helvetica, sans-serif;
-	color: #183b4f;
-	max-width: 600px;
-	margin: 0 auto;
+	color: #162c38;
+	background-image: url(../img/weather.jpeg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 }
 input {
 	background-color: transparent;
@@ -30,7 +31,7 @@ hr {
 }
 a {
 	text-decoration: none;
-	color: #183b4f;
+	color: #162c38;
 	font-size: 13px;
 	line-height: 16px;
 	padding: 10px;
@@ -47,10 +48,12 @@ a:hover {
 
 }
 .wraper {
-	background: linear-gradient(to top, #ede5d1 0%, #d4f0f0 100%);
+	background: rgba(252, 252, 252, 0.8);
 	background-repeat: no-repeat;
 	max-width: 600px;
 	padding-bottom: 20px;
+	margin: 0 auto;
+	box-shadow: rgba(224, 241, 244, 0.35) 0px 10px 15px
 }
 .container-accordeon {
 	background-color: transparent;
@@ -109,7 +112,7 @@ a:hover {
 .humidity,
 .wind {
 	font-weight: 500;
-	color: #183b4f;
+	color: #162c38;
 }
 .block-temperatur {
 	margin-left: -14px;
@@ -158,7 +161,7 @@ a:hover {
 }
 
 .active {
-	color: #183b4f;
+	color: #162c38;
 	cursor: default;
 }
 .active:hover {
@@ -184,11 +187,11 @@ a:hover {
 	
 }
 .accordion-month1 {
-	color: #265976;
+	color: #162c38;
 	font-size: 20px;
 }
 .accordion-day1 {
-	color: #265976;
+	color: #162c38;
 	font-size: 20px;
 }
 .accordion-img {
@@ -221,11 +224,11 @@ button.accordion-button:focus {
 }
 .accordion-content {
 	margin-top: 8px;
-	color: #265976;
+	color: #162c38;
 	text-align: center;
 }
 .source-code__link {
-	color: #2e7496;
+	color: #326079;
 	font-size: 16px;
 	padding: 0;
 }
