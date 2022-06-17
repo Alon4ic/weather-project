@@ -25,6 +25,69 @@ if (currentMinutes < 10) {
 let currentTime = document.querySelector(".times");
 currentTime.innerHTML = `${currentHour} : ${currentMinutes}`;
 
+
+
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let days = ["Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"];
+	return days[day];
+	
+}
+
+function showForecast(response) {
+	let forecast = response.data.daily;
+	let forecastCell = document.querySelector("#forecast");
+	let forecastHTML = `<div class="row forecast-item">`;
+	
+	forecast.forEach(function(forecastDay) {
+		forecastHTML = forecastHTML + `
+					<div class="col-2">
+						
+						<h3 class="accordion-day1">${formatDay(forecastDay.dt)}</h3>
+						<h3 class="accordion-month1">${forecastDay.weather[0].main}</h3>
+					</div>
+					<div class="col-2">
+						<img class="accordion-img img-fluid" src="img/${forecastDay.weather[0].icon}.png" alt="sunny">
+						<p class="accordion-content"><strong class="temperature-forecast-max">${Math.round(forecastDay.temp.max)}°/</strong><span
+								class="temperature-forecast-min">${Math.round(forecastDay.temp.min)}°</span></p>
+					</div>
+					<div class="col-2">
+						<img class="accordion-img img-fluid" src="img/humidity.png" alt="Humidity">
+						<p class="accordion-content">${forecastDay.humidity}%</p>
+					</div>
+					<div class="col-2">
+						<img class="accordion-img img-fluid" src="img/wind.png" alt="wind">
+						<p class="accordion-content">${Math.round(forecastDay.wind_speed)} km/h</p>
+					</div>
+					<div class="col-2">
+						<img class="accordion-img img-fluid" src="img/precipitation.png" alt="sunny">
+						<p class="accordion-content">${Math.round(forecastDay.pop * 100)} %</p>
+					</div>
+					<div class="col-2">
+						<img class="accordion-img-barometr img-fluid" src="img/barometer.png" alt="sunny">
+						<p class="accordion-content">${forecastDay.pressure}</p>
+					</div>
+					<hr>
+				`;
+	});
+	forecastHTML = forecastHTML + `</div>`
+	forecastCell.innerHTML = forecastHTML;	
+}
+function getForecast(coordinates) {
+	console.log(coordinates);
+	let apiKey = "7db589669794c40edb745ea0a4fe919c";
+	let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&&appid=${apiKey}&units=metric`;
+	console.log(apiUrl);
+	axios.get(apiUrl).then(showForecast);
+}
+
 function showTemperature(response) {
 	console.log(response.data);
 	let temperatureCell = document.querySelector("#strong-temp");
@@ -47,6 +110,8 @@ function showTemperature(response) {
 	windCell.innerHTML = Math.round(response.data.wind.speed);
 	iconCell.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   	iconCell.setAttribute("alt", response.data.weather[0].description);
+
+	getForecast(response.data.coord);
 }
 function search(city) {
 	let apiKey = "7db589669794c40edb745ea0a4fe919c";
@@ -95,3 +160,4 @@ let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", showTemperatureCelcius);
 
 search("Rivne");
+

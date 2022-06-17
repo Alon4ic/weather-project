@@ -14,7 +14,6 @@ body {
 	background-image: url(../img/weather.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
 }
 input {
 	background-color: transparent;
@@ -25,7 +24,7 @@ h1 {
 	font-size: 34px;
 }
 hr {
-	margin: 0px;
+	margin: 10px;
 	height: 2px;
 	background-color: rgb(99, 106, 121);
 	border: none;
@@ -76,13 +75,16 @@ a:hover {
 }
 .city-name {
 	text-transform: capitalize;
+	text-shadow: #cff1f7 3px 3px;
 }
 .day-name {
 	margin: 10px 0;
 	font-size: 34px;
+	text-shadow: #cff1f7 3px 3px;
 }
 .times {
-	font-size: 34PX;
+	font-size: 34px;
+	text-shadow: #cff1f7 3px 3px;
 }
 .form-btn {
 	width: 30%;
@@ -193,19 +195,29 @@ a:hover {
 }
 .accordion-month1 {
 	color: #162c38;
+	font-style: italic;
 	font-size: 20px;
 	text-align: center;
+	margin-top: 10px;
+	text-shadow: #cff1f7 3px 3px;
 	
 }
 .accordion-day1 {
 	color: #162c38;
 	font-size: 20px;
-	padding-left: 15px;
+	text-align: center;
+	text-shadow: #cff1f7 3px 3px;
 }
-.accordion-img {
+.img1, img {
 	display: block;
 	width: 25px;
 	margin: 0 auto;
+}
+.accordion-img-barometr {
+	display: block;
+	width: 35px;
+	margin: 0 auto;
+	margin-top: -10px;
 }
 
 .accordion-content {
