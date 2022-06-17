@@ -49,7 +49,7 @@ a:hover {
 
 }
 .wraper {
-	background: rgba(252, 252, 252, 0.8);
+	background: rgba(252, 252, 252, 0.6);
 	background-repeat: no-repeat;
 	max-width: 600px;
 	padding-bottom: 20px;
@@ -74,9 +74,11 @@ a:hover {
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(119, 168, 182, 0.55);
 }
-
+.city-name {
+	text-transform: capitalize;
+}
 .day-name {
-	margin-top: 5px;
+	margin: 10px 0;
 	font-size: 34px;
 }
 .times {
@@ -107,30 +109,30 @@ a:hover {
 	display: none;
 }
 .city-img {
-	padding-top: 10px;
-	width: 60%;
+	padding-top: -10px;
+	width: 50%;
+	display: block;
+	margin: 0 auto;
 }
 .humidity,
 .wind {
 	font-weight: 500;
 	color: #162c38;
-}
-.block-temperatur {
-	margin-left: -14px;
+	margin-left: 37px;
+	
 }
 .temperatur {
+	margin: -5px 0;
     display: flex;
-	justify-content: center;	
+	justify-content: center;
 }
 .temperatur-item1 {
-	padding: 0;
 	font-size: 34px;
 	font-weight: 400;
 	letter-spacing: 2px;
 
 }
 .temperatur-item2 {
-	padding: 0;
 	font-size: 34px;
 	
 }
@@ -169,16 +171,18 @@ a:hover {
 	text-decoration: underline;
 }
 .weather {
+	margin-top: 5px;
 	font-size: 16px;
 	font-weight: 500;
 	text-align: center;
+	text-transform: capitalize;
 }
 .meaning {
 	display: flex;
 	justify-content: center;
 }
-.accordion-item {
-	background-color: transparent;
+.forecast-item {
+	padding: 5px 0;
 	
 }
 .accordion-inner1 {
@@ -190,39 +194,20 @@ a:hover {
 .accordion-month1 {
 	color: #162c38;
 	font-size: 20px;
+	text-align: center;
+	
 }
 .accordion-day1 {
 	color: #162c38;
 	font-size: 20px;
+	padding-left: 15px;
 }
 .accordion-img {
 	display: block;
 	width: 25px;
 	margin: 0 auto;
 }
-.accordion {
-	color: #265976;
-	--bs-accordion-bg: transparent;
-	--bs-accordion-active-bg: transparent;
-	--bs-accordion-btn-focus-border-color: transparent;
-}
-.accordion-body {
-	padding: 5px;
-	height: 80px;
-	background: #d8e9f2;
-	border: 1px solid #4e95b8;
-	border-radius: 5px;
-	box-shadow: 0 0 5px rgba(112, 108, 108, 0.5);
-	text-align: center;
-}
 
-button.accordion-button {
-	padding: 3px;
-	border: none; 
-}
-button.accordion-button:focus {
-	border: none;
-}
 .accordion-content {
 	margin-top: 8px;
 	color: #162c38;
