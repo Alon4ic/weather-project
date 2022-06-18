@@ -277,8 +277,9 @@ a:hover {
 	}
 	.city-name,
 	.day-name,
-	.times {
-		font-size: 20px;
+	.times,
+	.month-item {
+		font-size: 14px;
 	}
 	.accordion-month1,
 	.accordion-day1 {
@@ -291,15 +292,17 @@ a:hover {
 		font-size: 10px;
 	}
 	.temperatur-item1,
-	.temperatur-item2 {
-		font-size: 20px;
-	}
-	.temperature-link-c,
-	.temperature-link-f {
-		font-size: 20px;
+	.min-temp,
+	.temperature-link,
+	.temp-unit {
+		font-size: 16px;
 	}
 	.humidity,
 	.wind {
+		font-size: 10px;
+		margin-left: -15px;
+	}
+	.weather {
 		font-size: 12px;
 	}
 }
