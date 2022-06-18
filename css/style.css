@@ -14,6 +14,7 @@ body {
 	background-image: url(../img/weather.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 100vh;
 }
 input {
 	background-color: transparent;
@@ -21,14 +22,10 @@ input {
 	padding: 5px;	
 }
 h1 {
-	font-size: 34px;
+	font-size: 26px;
+	padding-top: 8px;
 }
-hr {
-	margin: 10px;
-	height: 2px;
-	background-color: rgb(99, 106, 121);
-	border: none;
-}
+
 a {
 	text-decoration: none;
 	color: #162c38;
@@ -43,134 +40,120 @@ a:hover {
 }
 
 .container {
-	max-width: 700px;
-	margin: 0 auto;
-
+	max-width: 600px;
+	margin-top: 10px;
 }
 .wraper {
-	background: rgba(252, 252, 252, 0.6);
+	background: transparent;
 	background-repeat: no-repeat;
 	max-width: 600px;
 	padding-bottom: 20px;
 	margin: 0 auto;
 	box-shadow: rgba(224, 241, 244, 0.35) 0px 10px 15px
 }
-.container-accordeon {
-	background-color: transparent;
-	border: 1px solid #b1a585;
-	background-repeat: no-repeat;
-	
-}
 .form-inner{
+	background: rgba(252, 252, 252, 0.6);
+	border: 2px solid rgb(79, 156, 216);
+	border-radius: 30px 0 30px 0;
 	display: flex;
 	padding: 20px 0;
+	
 }
 .form-item {
 	margin-left: 20px;
 	width: 60%;	
 	background-color: #d2eaf5;
 	border: 2px solid #4e95b8;
-	border-radius: 5px;
+	border-radius: 20px 0 20px 0;
 	box-shadow: 0 0 10px rgba(119, 168, 182, 0.55);
-}
-.city-name {
-	text-transform: capitalize;
-	text-shadow: #cff1f7 3px 3px;
-}
-.day-name {
-	margin: 10px 0;
-	font-size: 34px;
-	text-shadow: #cff1f7 3px 3px;
-}
-.times {
-	font-size: 34px;
-	text-shadow: #cff1f7 3px 3px;
 }
 .form-btn {
 	width: 30%;
 	background-color: #d2eaf5;
 	border: 2px solid #4e95b8;
-	border-radius: 5px;
+	border-radius: 20px 0 20px;
 	padding: 5px 10px;
 	margin-left: 20px;
 	color: grey;
 	box-shadow: 0 0 10px rgba(119, 168, 182, 0.55);
 	transition: all 200ms ease-in-out;
 }
+
 .form-btn:hover {
 	background-color: #b9dcee;
 }
+
 .form-position:hover {
 	background-color: #b9dcee;
 }
+
 .search-img {
 	width: 25px;
 	display: none;
 }
+
 .form-position {
 	display: none;
 }
+.weather-city {
+	background: rgba(252, 252, 252, 0.4);
+	border: 2px solid rgb(79, 156, 216);
+	border-radius: 30px 0 30px 0;
+	padding: 0 10px 0;
+	margin: 6px 0;
+}
+.city-name {
+	text-transform: capitalize;
+	text-shadow: #a8e4ee 3px 3px;
+}
+.times-box {
+	display: flex;
+}
+.day-name,
+.times,
+.month-item {
+	font-size: 24px;
+	text-shadow: #a8e4ee 3px 3px;
+}
 .city-img {
-	padding-top: -10px;
 	width: 50%;
 	display: block;
 	margin: 0 auto;
 }
 .humidity,
 .wind {
+	font-size: 20px;
 	font-weight: 500;
 	color: #162c38;
-	margin-left: 37px;
-	
+	text-align: center;
+	text-shadow: #a8e4ee 3px 3px;	
 }
 .temperatur {
-	margin: -5px 0;
+	margin: 5px 0;
     display: flex;
 	justify-content: center;
 }
 .temperatur-item1 {
-	font-size: 34px;
+	font-size: 26px;
 	font-weight: 400;
-	letter-spacing: 2px;
-
+	margin-left: -39px;
 }
-.temperatur-item2 {
-	font-size: 34px;
-	
+.min-temp,
+.temp-unit{
+	font-size: 26px;
 }
-.temperature-link-c {
-	padding: 10px 0;
-	cursor: pointer;
-	font-weight: 500;
-	font-size: 34px;
-	color: #6f1010;
-	
-}
-.temperature-link-c:hover,
-.temperature-link-f:hover {
-	background-color: transparent;
-	color: #6f1010;
-	
-}
-.temperature-link-f {
-	padding: 10px 0 20px;
-	font-weight: 500;
-	cursor: pointer;
-	font-size: 34px;
-	color: #6f1010;
+.temperatur-strong,
+.temperature-link,
+.min-temp,
+.temp-unit,
+.humidity-meaning,
+.wind-meaning {
+	text-shadow: #c2e9f0 3px 3px;
 }
 .temperature-link {
-	margin-top: -5px;
+	font-size: 26px;
 	font-weight: 500;
-	font-size: 34px;
-}
-
-.active {
-	color: #162c38;
-	cursor: default;
-}
-.active:hover {
-	text-decoration: underline;
+	text-shadow: #c2e9f0 3px 3px;
 }
 .weather {
 	margin-top: 5px;
@@ -178,46 +161,51 @@ a:hover {
 	font-weight: 500;
 	text-align: center;
 	text-transform: capitalize;
+	text-shadow: #a8e4ee 3px 3px;
 }
 .meaning {
-	display: flex;
+	display: none;
 	justify-content: center;
 }
 .forecast-item {
 	padding: 5px 0;
-	
+	background: rgba(252, 252, 252, 0.4);
+	border: 2px solid rgb(79, 156, 216);
+	border-radius: 30px  0 0 0;
+	margin: 4px 3px;
 }
-.accordion-inner1 {
-	background-color: transparent;
-	
+.btn-line {
+	height: 8px;
+	background-color: #50adf4;
 	border: none;
-	
 }
 .accordion-month1 {
 	color: #162c38;
 	font-style: italic;
+	font-weight: 600;
 	font-size: 20px;
 	text-align: center;
 	margin-top: 10px;
-	text-shadow: #cff1f7 3px 3px;
+	text-shadow: #c2e9f0 3px 3px;
 	
 }
 .accordion-day1 {
+	padding-top: 5px;
 	color: #162c38;
 	font-size: 20px;
 	text-align: center;
-	text-shadow: #cff1f7 3px 3px;
+	text-shadow: #c2e9f0 3px 3px;
 }
-.img1, img {
+.accordion-img {
 	display: block;
 	width: 25px;
 	margin: 0 auto;
+	padding-top: 4px;
 }
 .accordion-img-barometr {
 	display: block;
-	width: 35px;
+	width: 29px;
 	margin: 0 auto;
-	margin-top: -10px;
 }
 
 .accordion-content {
@@ -225,10 +213,19 @@ a:hover {
 	color: #162c38;
 	text-align: center;
 }
+.source-code {
+	background-color: #63b6f5;
+	margin: -12px 3px 0;
+	padding-bottom: 12px;
+	border-left: 2px solid rgb(79, 156, 216);
+	border-bottom: 2px solid rgb(79, 156, 216);
+	border-right: 2px solid rgb(79, 156, 216);
+	border-radius: 0 0 30px 0;
+}
 .source-code__link {
 	color: #326079;
 	font-size: 16px;
-	padding: 0;
+	
 }
 .source-code__creator {
 	padding: 0;
@@ -247,24 +244,28 @@ a:hover {
 	text-decoration: underline;
 }
 @media (max-width: 630px) {
-	.city-name, .day-name, .times {
-		font-size: 28px;
+	.city-name,
+	.day-name,
+	.times,
+	.month-item {
+		font-size: 22px;
 	}
 	.accordion-month1,
 	.accordion-day1 {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.temperatur-item1,
-	.temperatur-item2{
-		font-size: 28px;
-	}
-	.temperature-link-c,
-	.temperature-link-f {
-		font-size: 28px;
+	.min-temp,
+	.temperature-link,
+	.temp-unit {
+		font-size: 22px;
 	}
 	.humidity,
 	.wind {
-		font-size: 14px;
+		font-size: 16px;
+	}
+	.accordion-content {
+		font-size: 12px;
 	}
 }
 @media (max-width: 450px) {
@@ -281,13 +282,13 @@ a:hover {
 	}
 	.accordion-month1,
 	.accordion-day1 {
-		font-size: 14px;
+		font-size: 16px;
 	}
 	.accordion-img {
 		width: 20px;
 	}
 	.accordion-content {
-		font-size: 12px;
+		font-size: 10px;
 	}
 	.temperatur-item1,
 	.temperatur-item2 {

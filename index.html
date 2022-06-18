@@ -21,7 +21,7 @@
 <body>
 	<div class="wraper">
 		<div class="container">
-			<div class="row">
+			<div class=" searh-inner">
 				<form class="form-inner" id="search-form">
 					<input class="form-item" id="form-item" type="text" placeholder="City name...">
 					<button class="form-btn" type="submit" autocomplete="off">
@@ -33,33 +33,34 @@
 
 			<section class="weather-city">
 				<div class="row">
-					<div class="col-5">
+					<div class="col-4 city-item">
 						<h1 class="city-name"><span id="city">Rivne</span>, <span id="country"></span></h1>
+						<div class="times-box">
 						<h2 id="day" class="day-name">Fryday</h2>
 						<h3 id="times" class="times"></h3>
+						</div>
+						<h3 class="month-item"> <span id="month" class="month">Month</span>, <span id="number">12</span></h3>
 					</div>
-					<div class="col-3">
+					<div class="col-4">
 						<img class="img-fluid city-img" id="icon" src="" alt="">
 						<p class="weather" id="description">Warm</p>
 					</div>
 					<div class="col-4 block-temperatur">
 						<div class="temperatur">
 							<div class="temperatur-item1"><strong class="temperatur-strong" id="strong-temp">20</strong><span
-									class="temperature-link">/</span><span class="min-temp" id="min-temp">18</span></div>
+									class="temperature-link">°C/</span><span class="min-temp" id="min-temp">18</span><span class="temp-unit">°C</span></div>
 						</div>
 						<div class="meaning">
 							<a href="#" id="celcius" class="temperature-link-c active">C°</a><span
 								class="temperature-link">/</span>
 							<a href="#" id="fahrenheit" class="temperature-link-f">F°</a>
 						</div>
-						<strong class="humidity">Humidity: <span class="humidity-meaning" id="humidity"> </span>%</strong>
-						<br>
+						<strong class="humidity">Humidity: <span class="humidity-meaning" id="humidity"> </span>%</strong><br>
 						<strong class="wind">Wind: <span class="wind-meaning" id="wind"></span> km/h</strong>
 						
 					</div>
 				</div>
 			</section>
-			<hr>
 			<div class="forecast" id="forecast">
 				<div class="row forecast-item">
 
@@ -90,121 +91,15 @@
 					</div>
 					<hr>
 				</div>
-				<div class="row forecast-item">
-
-					<div class="col-2">
-						<h3 class="accordion-month1">May</h3>
-						<h3 class="accordion-day1">Tuesday</h3>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/sunny.png" alt="sunny">
-						<p class="accordion-content"><strong class="temperature-forecast1-max">20/</strong><span
-								class="temperature-forecast1-min">17</span></p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/humidity.png" alt="Humidity">
-						<p class="accordion-content">65%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/wind.png" alt="wind">
-						<p class="accordion-content">12 mph</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/precipitation.png" alt="sunny">
-						<p class="accordion-content">0%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/barometer.png" alt="sunny">
-						<p class="accordion-content">749</p>
-					</div>
-					<hr>
+				
+				<div class="source-code">
+				<div class="content-item">
+					<a class="source-code__link" href="https://github.com/Alon4ic/weather-project" target="_blank">Application source
+						code,</a>
+					<a class="source-code__creator" href="https://www.linkedin.com/in/olena-redko-673903146/">by <span
+							class="my-name">Olena
+							Redko</span></a>
 				</div>
-				<div class="row forecast-item">
-
-					<div class="col-2">
-						<h3 class="accordion-month1">May</h3>
-						<h3 class="accordion-day1">Tuesday</h3>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/sunny.png" alt="sunny">
-						<p class="accordion-content"><strong class="temperature-forecast1-max">20/</strong><span
-								class="temperature-forecast1-min">17</span></p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/humidity.png" alt="Humidity">
-						<p class="accordion-content">65%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/wind.png" alt="wind">
-						<p class="accordion-content">12 mph</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/precipitation.png" alt="sunny">
-						<p class="accordion-content">0%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/barometer.png" alt="sunny">
-						<p class="accordion-content">749</p>
-					</div>
-					<hr>
-				</div>
-				<div class="row forecast-item">
-
-					<div class="col-2">
-						<h3 class="accordion-month1">May</h3>
-						<h3 class="accordion-day1">Tuesday</h3>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/sunny.png" alt="sunny">
-						<p class="accordion-content"><strong class="temperature-forecast1-max">20/</strong><span
-								class="temperature-forecast1-min">17</span></p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/humidity.png" alt="Humidity">
-						<p class="accordion-content">65%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/wind.png" alt="wind">
-						<p class="accordion-content">12 mph</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/precipitation.png" alt="sunny">
-						<p class="accordion-content">0%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/barometer.png" alt="sunny">
-						<p class="accordion-content">749</p>
-					</div>
-					<hr>
-				</div>
-				<div class="row forecast-item">
-
-					<div class="col-2">
-						<h3 class="accordion-month1">May</h3>
-						<h3 class="accordion-day1">Tuesday</h3>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/sunny.png" alt="sunny">
-						<p class="accordion-content"><strong class="temperature-forecast1-max">20/</strong><span
-								class="temperature-forecast1-min">17</span></p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/humidity.png" alt="Humidity">
-						<p class="accordion-content">65%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/wind.png" alt="wind">
-						<p class="accordion-content">12 mph</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/precipitation.png" alt="sunny">
-						<p class="accordion-content">0%</p>
-					</div>
-					<div class="col-2">
-						<img class="accordion-img img-fluid" src="img/barometer.png" alt="sunny">
-						<p class="accordion-content">749</p>
-					</div>
-					<hr>
 				</div>
 			</div>
 

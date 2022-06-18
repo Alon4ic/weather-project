@@ -1,17 +1,19 @@
 let currentDate = new Date();
 
 let daysWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
 ];
 let currentDay = daysWeek[currentDate.getDay()];
 let currentHour = currentDate.getHours();
 let currentMinutes = currentDate.getMinutes();
+let months  = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let currentMonth = months[currentDate.getMonth()];
 
 let nameCurrentDay = document.querySelector(".day-name");
 nameCurrentDay.innerHTML = `${currentDay}`;
@@ -23,8 +25,9 @@ if (currentMinutes < 10) {
   currentMinutes = `0${currentMinutes}`;
 }
 let currentTime = document.querySelector(".times");
-currentTime.innerHTML = `${currentHour} : ${currentMinutes}`;
+currentTime.innerHTML = `, ${currentHour} : ${currentMinutes}`;
 
+let newDate = currentDate.getDate();
 
 
 function formatDay(timestamp) {
@@ -41,16 +44,20 @@ function formatDay(timestamp) {
 	
 }
 
+
 function showForecast(response) {
 	let forecast = response.data.daily;
 	let forecastCell = document.querySelector("#forecast");
 	let forecastHTML = `<div class="row forecast-item">`;
 	
-	forecast.forEach(function(forecastDay) {
+	forecast.forEach(function(forecastDay, index) {
+		let forecastC = `Math.round(${forecast}.temp.max)`;
+		if (index < 5) {
 		forecastHTML = forecastHTML + `
 					<div class="col-2">
 						
 						<h3 class="accordion-day1">${formatDay(forecastDay.dt)}</h3>
+						
 						<h3 class="accordion-month1">${forecastDay.weather[0].main}</h3>
 					</div>
 					<div class="col-2">
@@ -74,12 +81,14 @@ function showForecast(response) {
 						<img class="accordion-img-barometr img-fluid" src="img/barometer.png" alt="sunny">
 						<p class="accordion-content">${forecastDay.pressure}</p>
 					</div>
-					<hr>
+					<button class="btn-line"></button>
 				`;
+		}
 	});
 	forecastHTML = forecastHTML + `</div>`
 	forecastCell.innerHTML = forecastHTML;	
 }
+
 function getForecast(coordinates) {
 	console.log(coordinates);
 	let apiKey = "7db589669794c40edb745ea0a4fe919c";
@@ -98,6 +107,8 @@ function showTemperature(response) {
 	let humidityCell = document.querySelector("#humidity");
 	let windCell = document.querySelector("#wind");
 	let iconCell = document.querySelector("#icon");
+	let monthCell = document.querySelector("#month");
+	let dateCell = document.querySelector("#number");
 
 	celsiusTemperature = response.data.main.temp;
 	minCelsiusTemperature = response.data.main.temp_min;
@@ -110,6 +121,8 @@ function showTemperature(response) {
 	windCell.innerHTML = Math.round(response.data.wind.speed);
 	iconCell.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   	iconCell.setAttribute("alt", response.data.weather[0].description);
+	monthCell.innerHTML = `${currentMonth}`
+	dateCell.innerHTML = `${newDate}`;
 
 	getForecast(response.data.coord);
 }
@@ -153,11 +166,7 @@ function showTemperatureCelcius(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", citySearch);
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showTemperatureFahrenheit);
 
-let celciusLink = document.querySelector("#celcius");
-celciusLink.addEventListener("click", showTemperatureCelcius);
 
 search("Rivne");
 
