@@ -15,7 +15,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
-	text-shadow: #405a5e 0.5px 0.5px;
+	text-shadow: #141c1d 0.5px 0.5px;
 }
 input {
 	background-color: transparent;
@@ -140,19 +140,10 @@ a:hover {
 .temp-unit{
 	font-size: 26px;
 }
-.temperatur-strong,
-.temperature-link,
-.min-temp,
-.temp-unit,
-.humidity-meaning,
-.wind-meaning {
-	text-shadow: #c2e9f0 3px 3px;
-}
 .temperature-link {
 	font-size: 26px;
 	font-weight: 500;
-	text-shadow: #c2e9f0 3px 3px;
-}
+}	
 .weather {
 	margin-top: 5px;
 	font-size: 16px;
@@ -178,8 +169,8 @@ a:hover {
 }
 .accordion-month1 {
 	color: #162c38;
-	font-style: italic;
-	font-weight: 600;
+	
+	font-weight: 400;
 	font-size: 20px;
 	text-align: center;
 	margin-top: 10px;
@@ -207,6 +198,7 @@ a:hover {
 	margin-top: 8px;
 	color: #162c38;
 	text-align: center;
+	text-shadow: none;
 }
 .source-code {
 	background-color: #63b6f5;
@@ -260,7 +252,7 @@ a:hover {
 		font-size: 16px;
 	}
 	.accordion-content {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 @media (max-width: 450px) {
@@ -285,6 +277,7 @@ a:hover {
 	}
 	.accordion-content {
 		font-size: 10px;
+		text-align: left;
 	}
 	.temperatur-item1,
 	.min-temp,
