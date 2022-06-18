@@ -15,6 +15,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
+	text-shadow: #405a5e 0.5px 0.5px;
 }
 input {
 	background-color: transparent;
@@ -104,7 +105,6 @@ a:hover {
 }
 .city-name {
 	text-transform: capitalize;
-	text-shadow: #a8e4ee 3px 3px;
 }
 .times-box {
 	display: flex;
@@ -113,7 +113,6 @@ a:hover {
 .times,
 .month-item {
 	font-size: 24px;
-	text-shadow: #a8e4ee 3px 3px;
 }
 .city-img {
 	width: 50%;
@@ -122,11 +121,10 @@ a:hover {
 }
 .humidity,
 .wind {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 500;
 	color: #162c38;
-	text-align: center;
-	text-shadow: #a8e4ee 3px 3px;	
+	text-align: center;	
 }
 .temperatur {
 	margin: 5px 0;
@@ -161,7 +159,6 @@ a:hover {
 	font-weight: 500;
 	text-align: center;
 	text-transform: capitalize;
-	text-shadow: #a8e4ee 3px 3px;
 }
 .meaning {
 	display: none;
@@ -186,15 +183,13 @@ a:hover {
 	font-size: 20px;
 	text-align: center;
 	margin-top: 10px;
-	text-shadow: #c2e9f0 3px 3px;
-	
 }
 .accordion-day1 {
 	padding-top: 5px;
 	color: #162c38;
 	font-size: 20px;
 	text-align: center;
-	text-shadow: #c2e9f0 3px 3px;
+	
 }
 .accordion-img {
 	display: block;
