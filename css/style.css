@@ -15,7 +15,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
-	text-shadow: #141c1d 0.5px 0.5px;
+	text-shadow: #d8faff 0.5px 0.5px;
 }
 input {
 	background-color: transparent;
@@ -198,7 +198,6 @@ a:hover {
 	margin-top: 8px;
 	color: #162c38;
 	text-align: center;
-	text-shadow: none;
 }
 .source-code {
 	background-color: #63b6f5;
